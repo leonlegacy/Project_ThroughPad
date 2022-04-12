@@ -15,6 +15,7 @@ public class ipadBinding : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         ipad.parent = transform;
-        //ipad.localPosition = Vector3.zero;
+        ipad.localPosition = Vector3.zero;
+        ipad.localRotation = Quaternion.identity;
     }
 }

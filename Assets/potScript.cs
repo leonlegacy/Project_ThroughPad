@@ -8,6 +8,7 @@ public class potScript : MonoBehaviour
     public int triggrAmount = 100;
     public bool isTriggered = false;
     [SerializeField] Animator anim;
+    [SerializeField] ParticleSystem FlowerParticle;
     public void takeWater()
     {
         Debug.Log("Taking water");
@@ -18,6 +19,7 @@ public class potScript : MonoBehaviour
             {
                 isTriggered = true;
                 anim.SetTrigger("grow");
+                FlowerParticle.Play();
             }
         }
         

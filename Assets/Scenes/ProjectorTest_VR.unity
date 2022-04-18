@@ -9984,6 +9984,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5092106512013168778, guid: 8ee32f8943638e74495a1b455855ba62,
         type: 3}
+      propertyPath: m_FieldOfView
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092106512013168778, guid: 8ee32f8943638e74495a1b455855ba62,
+        type: 3}
       propertyPath: m_IgnoreLayers.m_Bits
       value: 30007
       objectReference: {fileID: 0}

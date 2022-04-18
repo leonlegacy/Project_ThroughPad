@@ -19,4 +19,15 @@ public class wateringVFX : MonoBehaviour
             isPour = false;
         }
     }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("I hit shit! " + other.name);
+
+        if (other.TryGetComponent(out potScript pot))
+        {
+            Debug.Log("Hitting pot");
+            pot.takeWater();
+        }
+    }
 }

@@ -7,6 +7,10 @@ public class ixableScript : MonoBehaviour
 {
     [SerializeField] IXRaycaster ixRay;
     [SerializeField] UnityEvent hitEvent;
+    public ParticleSystem particle;
+    enum objects { watering, pot};
+    [SerializeField] objects thisObject;
+
 
     public bool followRay = false;
 
@@ -18,7 +22,8 @@ public class ixableScript : MonoBehaviour
             transform.rotation = ixRay.getTrackerRotation();
         } 
     }
-
+    
+    
     public void eventTrigger()
     {
         Debug.Log("EventTriggered");

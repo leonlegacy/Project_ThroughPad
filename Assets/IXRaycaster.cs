@@ -20,6 +20,7 @@ public class IXRaycaster : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow, 3);
             if (hit.transform.GetComponent<ixableScript>())
             {
+                hit.transform.GetComponent<ixableScript>().setIXRay(this);
                 hit.transform.GetComponent<ixableScript>().eventTrigger();
                 if (hit.transform.GetComponent<Collider>()) hit.transform.GetComponent<Collider>().enabled = false;
             }
@@ -31,7 +32,6 @@ public class IXRaycaster : MonoBehaviour
             hitPosition = hit.point;
             
         }
-        
     }
 
     public Quaternion getTrackerRotation()
@@ -43,7 +43,4 @@ public class IXRaycaster : MonoBehaviour
     {
         return hitPosition;
     }
-
-
-
 }

@@ -14,7 +14,7 @@ public class ipadBinding : MonoBehaviour
     IEnumerator bind()
     {
         yield return new WaitForSeconds(1);
-        ipad.parent = transform;
+        ipad.parent = transform.GetChild(0);
         ipad.localPosition = Vector3.zero;
         ipad.localRotation = Quaternion.identity;
     }
